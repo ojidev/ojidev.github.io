@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  --main-color: #04BFAD; /* CSS Variable */
+}
+.banner-bg {
+  background-image: url("../src/index-bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  color: #fff;
+}
+.banner-filter {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+}
+.banner-msg {
+  position: absolute;
+  top: 40%;
+  padding: 0 5%;
+}
+.banner-msg p {
+  font-size: 2rem;
+}
+.banner-msg h1 {
+  font-size: 4rem;
+  padding: 0.7rem 0;
+  transition: transform .3s;
+}
+.banner-msg h1:hover {
+  transform: scale(1.03, 1.03);
+}
+/* Span-Animation Setting --------- */
+.banner-msg span {
+  color: var(--main-color);
+  animation: greentext 6s forwards;
+}
+@keyframes greentext {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Arrow-Animation Setting ---------*/
+.fa-angle-double-down {
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  color: var(--main-color);
+  animation: beat 1s infinite alternate;
+}
+@keyframes beat {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+    color: #fff;
+  }
+}
+/* --------------------------------- */
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
